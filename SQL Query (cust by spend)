@@ -1,0 +1,54 @@
+/* This query extracts a list of  customers, their city/country, and their total amount paid to Rockbuster from the database.
+First a CTE is set up to select a list of the top 10 cities within the top 10 countries by count of customers. Subquery 1 provides the list of countries
+to the CTE main query, which selects cities with country ID in the subquery extraction.
+
+Then in the main query, we join payment information to sum the amount paid per user, and extract the top 5 users by amount paid from within the CTE list of cities.
+*/
+
+--CTE--
+WITH cities AS (SELECT i.city_id
+FROM customer u
+JOIN address a ON u.address_id = a.address_id
+JOIN city i ON a.city_id = i.city_id
+JOIN country o ON i.country_id = o.country_id
+WHERE o.country_id IN 
+	--subquery1--
+	(
+	SELECT o.country_id
+	FROM customer u
+
+	JOIN address a ON u.address_id = a.address_id
+	JOIN city i ON a.city_id = i.city_id
+	JOIN country o ON i.country_id = o.country_id
+
+	GROUP BY
+	o.country_id
+	ORDER BY COUNT(u.customer_id) DESC
+	LIMIT 10
+	)
+GROUP BY o.country,
+	i.city_id
+ORDER BY COUNT(u.customer_id) DESC
+LIMIT 10)
+
+--main query--
+SELECT u.customer_id, u.first_name, u.last_name, i.city, o.country, SUM(p.amount) AS total_amount_paid
+FROM customer u
+JOIN address a ON u.address_id = a.address_id
+JOIN city i ON a.city_id = i.city_id
+JOIN country o ON i.country_id = o.country_id
+JOIN payment p ON u.customer_id = p.customer_id
+WHERE
+i.city_id IN 
+	--subquery2 ref CTE--
+	(
+	SELECT city_id FROM cities
+	)
+GROUP BY 
+u.customer_id, 
+u.first_name, 
+u.last_name, 
+o.country, 
+i.city
+ORDER BY COUNT(p.amount) DESC
+LIMIT 5
