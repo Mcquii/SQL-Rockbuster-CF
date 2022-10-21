@@ -1,0 +1,26 @@
+This query uses a subquery to extract a list of the top 10 countries by number of customers in Rockbuster's database.
+That subquery feeds into the main query as a Where clause. 
+The main query extracts the top 10 cities by number of customers from the 10 countries determined by the subquery's results.
+
+SELECT COUNT(u.customer_id) AS customers, i.city, i.city_id, o.country
+FROM customer u
+JOIN address a ON u.address_id = a.address_id
+JOIN city i ON a.city_id = i.city_id
+JOIN country o ON i.country_id = o.country_id
+WHERE o.country_id IN 
+(
+SELECT o.country_id
+FROM customer u
+JOIN address a ON u.address_id = a.address_id
+JOIN city i ON a.city_id = i.city_id
+JOIN country o ON i.country_id = o.country_id
+GROUP BY
+	o.country_id
+ORDER BY COUNT(u.customer_id) DESC
+LIMIT 10
+)
+GROUP BY o.country,
+	i.city,
+	i.city_id
+ORDER BY COUNT(u.customer_id) DESC
+LIMIT 10;
