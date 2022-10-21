@@ -1,5 +1,4 @@
-
-
+See Top 5 cust Excel file upload for results
 
 /* There are 2 subqueries and a CTE in the SQL expression below. Both subqueries are part of the CTE.
 The CTE selects a list of the top 5 customers, ordering them by total spend on Rockbuster rentals, from within the top 10 cities (subq1)  
