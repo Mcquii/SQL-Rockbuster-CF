@@ -12,7 +12,7 @@ Key questions included:
 ● Do sales figures vary between geographic regions?  
 
 Main deliverables for this project included a presentation, and Tableau dashboard.  
-[Tableau Dashboard]([https://www.google.com](https://public.tableau.com/app/profile/ian.m2989/viz/McQuillen3_10/RockbusterAnnualReview) "Dashboard")  
+[Tableau Dashboard](https://public.tableau.com/app/profile/ian.m2989/viz/McQuillen3_10/RockbusterAnnualReview)  
 [Rockbuster Annual Review Presentation](https://github.com/Mcquii/SQL-Rockbuster-CF/files/9841891/McQuillen.Achievement.3_pdf.pdf)  
 
 Additional deliverables were a tech doc with query information, plus a data dictionary/ERD  
