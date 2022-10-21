@@ -1,6 +1,6 @@
-# This query uses a subquery to extract a list of the top 10 countries by number of customers in Rockbuster's database.
-# That subquery feeds into the main query as a Where clause. 
-# The main query extracts the top 10 cities by number of customers from the 10 countries determined by the subquery's results.
+/* This query uses a subquery to extract a list of the top 10 countries by number of customers in Rockbuster's database. 
+That subquery feeds into the main query as a Where clause. 
+The main query extracts the top 10 cities by number of customers from the 10 countries determined by the subquery's results.*/
 
 SELECT COUNT(u.customer_id) AS customers, i.city, i.city_id, o.country
 FROM customer u
