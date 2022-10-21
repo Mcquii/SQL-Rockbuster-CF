@@ -1,6 +1,6 @@
 # SQL-Rockbuster-CF
-A CareerFoundry project using SQL to query data from "Rockbuster" video rental company
-[A3_Data_Project_Brief .pdf](https://github.com/Mcquii/SQL-Rockbuster-CF/files/9841863/A3_Data_Project_Brief.pdf)
+A CareerFoundry project using SQL to query data from "Rockbuster" video rental company  
+[Project Brief](https://github.com/Mcquii/SQL-Rockbuster-CF/files/9841863/A3_Data_Project_Brief.pdf)
 
 In this project, I was directed to write queries in Postgres SQL to extract data from Rockbuster's database of video, store and customer information. The data extracted was used to answer business questions in an annual presentation to the management board.
 
