@@ -4,7 +4,7 @@ A CareerFoundry project using SQL to query data from "Rockbuster" video rental c
 
 In this project, I was directed to write queries in Postgres SQL to extract data from Rockbuster's database of video, store and customer information. The data extracted was used to answer business questions in an annual presentation to the management board.
 
-Key questions included:
+Key questions included:  
 ● Which movies contributed the most/least to revenue gain?  
 ● What was the average rental duration for all videos?  
 ● Which countries are Rockbuster customers based in?  
