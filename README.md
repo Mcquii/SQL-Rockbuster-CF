@@ -11,6 +11,12 @@ Key questions included:
 ● Where are customers with a high lifetime value based?
 ● Do sales figures vary between geographic regions?
 
-Deliverables for this project included a presentation, and Tableau dashboard.
-[https://public.tableau.com/app/profile/ian.m2989/viz/McQuillen3_10/RockbusterAnnualReview](https://www.google.com "Dashboard")
-[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
+Main deliverables for this project included a presentation, and Tableau dashboard.
+[Tableau Dashboard]([https://www.google.com](https://public.tableau.com/app/profile/ian.m2989/viz/McQuillen3_10/RockbusterAnnualReview) "Dashboard")
+[Rockbuster Annual Review Presentation](https://github.com/Mcquii/SQL-Rockbuster-CF/files/9841891/McQuillen.Achievement.3_pdf.pdf)
+
+Additional deliverables were a tech doc with query information, plus a data dictionary/ERD
+[Rockbuster Review Queries Tech Doc.xlsx](https://github.com/Mcquii/SQL-Rockbuster-CF/files/9841898/McQuillen.Achievement.3.Tech.Doc.xlsx)
+[Rockbuster Data Dic.pdf](https://github.com/Mcquii/SQL-Rockbuster-CF/files/9841896/McQuillen.Achievement.3.Data.Dic.pdf)
+
+
